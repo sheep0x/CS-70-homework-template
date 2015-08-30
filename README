@@ -1,0 +1,23 @@
+The following is the main content:
+    hw1.tex
+
+The following are for the human-readable layer.  First three are the CC icon that appears at the end of the document.  latex.tex is a piece of LaTeX code that contains license information, so that we can simply \include it in several documents without having to type it out again and again.
+    cc_by-sa.pdf
+    cc_by-sa.pdf_tex
+    cc_by-sa.svg
+    latex.tex
+
+The following is for the machine-readable layer.  You don't see it directly in the document.  However, it allows certain softwares to obtain information like who the author is, what license the document is released under, etc., which is hard to extract from the visual, human-readable layer.  For example, if you open the compiled PDF file in Evince (the default PDF viewer for GNOME and Unity), you can find the licensing information in Files > Properties (or sth like that).
+    cc_by-sa.xmp
+
+The following files are byproducts of compilation:
+    cc_by-sa.xmpi
+    latex.aux
+    latex.log
+They are safe to delete.
+
+To adapt this template, you only need to change the following file:
+    hw1.tex
+    cc_by-sa.xmp
+Replace all “YOUR NAME” and “YOUR EMAIL” and you're done.
+
