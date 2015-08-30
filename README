@@ -1,3 +1,9 @@
+For those wondering what this repo is: This repo contains template code for (UC Berkeley Fall 2015) CS 70 homeworks, so that beginners can save a bit of time.
+
+
+
+
+
 The following is the main content:
     hw1.tex
 
@@ -19,5 +25,5 @@ They are safe to delete.
 To adapt this template, you only need to change the following file:
     hw1.tex
     cc_by-sa.xmp
-Replace all “YOUR NAME” and “YOUR EMAIL” and you're done.
+Replace all “YOUR NAME” and “YOUR EMAIL” and that's it.
 
