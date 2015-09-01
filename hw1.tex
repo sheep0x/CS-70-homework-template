@@ -7,6 +7,18 @@
 % useful packages
 \usepackage[colorlinks=true]{hyperref}  % clickable links
 \usepackage{enumerate}                  % customize enumerated lists
+\usepackage{tabu}                       % table on steroids
+\usepackage{multirow}                   % for table spanning
+\usepackage{amsmath}
+\usepackage{amssymb}                    % for \nmid
+\usepackage{amsfonts}                   % for \mathbb
+
+% CS 70-specific
+\renewcommand{\implies}{\Rightarrow}    % AMS uses logical implication
+\newcommand{\Implies}{\Longrightarrow}  % CS 70 uses material implication
+                                        % TODO use AMS \implies for our \Implies
+\newcommand{\bicond}{\Leftrightarrow}   % \equiv for logical equivalence
+                                        % \bicond for material equivalence
 
 % packages for Creative Commons
 \usepackage{graphicx}
@@ -20,6 +32,10 @@
 \pagenumbering{gobble}
 \setlength{\parindent}{0px}
 
+
+
+
+
 \title{CS 70 Fall 2015 hw 1 solution}
 \author{Chen Ruichao \texttt{<linuxer.sheep.0x@gmail.com>}}
 \date{} % no date
@@ -28,13 +44,64 @@
 
 
 
+
 \section{Truth table}
 \begin{enumerate}[(a)]
-    \item
-    \item
-    \item
-    \item
+
+    \item % equivalent or not?
+
+          \begin{tabu}{cc|cc}
+              $  $&$  $&$  $&$  $ \\
+              \hline
+               &  &  &  \\
+               &  &  &  \\
+               &  &  &  \\
+               &  &  &  \\
+          \end{tabu}
+
+    \item % equivalent or not?
+
+          \begin{tabu}{ccc|cc}
+              $  $&$  $&$  $&$  $&$  $ \\
+              \hline
+                &   &   &   &   \\
+                &   &   &   &   \\
+                &   &   &   &   \\
+                &   &   &   &   \\
+                &   &   &   &   \\
+                &   &   &   &   \\
+                &   &   &   &   \\
+                &   &   &   &   \\
+          \end{tabu}
+
+    \item % equivalent or not?
+
+          \begin{tabu}{ccc|cc}
+              $  $&$  $&$  $&$  $&$  $ \\
+              \hline
+                &   &   &   &   \\
+                &   &   &   &   \\
+                &   &   &   &   \\
+                &   &   &   &   \\
+                &   &   &   &   \\
+                &   &   &   &   \\
+                &   &   &   &   \\
+                &   &   &   &   \\
+          \end{tabu}
+
+    \item % equivalent or not?
+
+          \begin{tabu}{cc|cc}
+              $  $&$  $&$  $&$  $ \\
+              \hline
+               &  &  &  \\
+               &  &  &  \\
+               &  &  &  \\
+               &  &  &  \\
+          \end{tabu}
+
 \end{enumerate}
+
 
 
 
@@ -49,6 +116,7 @@
 
 
 
+
 \section{Predicate}
 \begin{enumerate}[(a)]
     \item
@@ -59,51 +127,109 @@
 
 
 
+
 \section{Party}
+\newcommand{\partyrule}[2]{\forall x \; \big(#1 \implies #2\big)}
+Note: $P(x)$ should actually be ``$x$ is going to a party'', not ``$x$ goes to a party''.
+
 \begin{enumerate}[(a)]
+    \item \begin{enumerate}[(I)]
+              \item $\partyrule{REPLACE ME with antecedent}{REPLACE ME with consequence}$
+              \item $\partyrule{REPLACE ME}{REPLACE ME}$
+              \item $\partyrule{REPLACE ME}{REPLACE ME}$
+              \item $\partyrule{REPLACE ME}{REPLACE ME}$
+              \item $\partyrule{REPLACE ME}{REPLACE ME}$
+              \item $\partyrule{REPLACE ME}{REPLACE ME}$
+          \end{enumerate}
+
+    \item \begin{enumerate}[(I)]
+              \item $\partyrule{REPLACE ME}{REPLACE ME}$
+              \item $\partyrule{REPLACE ME}{REPLACE ME}$
+              \item $\partyrule{REPLACE ME}{REPLACE ME}$
+              \item $\partyrule{REPLACE ME}{REPLACE ME}$
+              \item $\partyrule{REPLACE ME}{REPLACE ME}$
+              \item $\partyrule{REPLACE ME}{REPLACE ME}$
+          \end{enumerate}
+
     \item
-    \item
-    \item
+
 \end{enumerate}
+
 
 
 
 
 \section{Karnaugh Maps}
 \begin{enumerate}[(a)]
+
+    \item \begin{tabu}{cccc|c}
+              $ A $&$ B $&$ C $&$ D $&$ Z $ \\
+              \hline
+              0 & 0 & 0 & 0 &  \\ % ← FILL IN HERE
+              0 & 0 & 0 & 1 &  \\ % ← FILL IN HERE
+              0 & 0 & 1 & 0 &  \\ % ← FILL IN HERE
+              0 & 0 & 1 & 1 &  \\ % ← FILL IN HERE
+              0 & 1 & 0 & 0 &  \\ % ← FILL IN HERE
+              0 & 1 & 0 & 1 &  \\ % ← FILL IN HERE
+              0 & 1 & 1 & 0 &  \\ % ← FILL IN HERE
+              0 & 1 & 1 & 1 &  \\ % ← FILL IN HERE
+              1 & 0 & 0 & 0 &  \\ % ← FILL IN HERE
+              1 & 0 & 0 & 1 &  \\ % ← FILL IN HERE
+              1 & 0 & 1 & 0 &  \\ % ← FILL IN HERE
+              1 & 0 & 1 & 1 &  \\ % ← FILL IN HERE
+              1 & 1 & 0 & 0 &  \\ % ← FILL IN HERE
+              1 & 1 & 0 & 1 &  \\ % ← FILL IN HERE
+              1 & 1 & 1 & 0 &  \\ % ← FILL IN HERE
+              1 & 1 & 1 & 1 &  \\ % ← FILL IN HERE
+          \end{tabu}
+
+    \item \begin{tabu}{cc|cccc}
+              \multicolumn{2}{c}{} & \multicolumn{4}{c}{$CD$} \\
+              \multicolumn{2}{c}{} & 00 & 01 & 11 & 10 \\ \cline{3-6}
+              \multirow{4}{*}{$AB$}
+                  & 00 &   &   &   &   \\ % ← TO BE FILLED IN
+                  & 01 &   &   &   &   \\ % ← TO BE FILLED IN
+                  & 11 &   &   &   &   \\ % ← TO BE FILLED IN
+                  & 10 &   &   &   &   \\ % ← TO BE FILLED IN
+          \end{tabu}
+
     \item
+
     \item
-    \item
-    \item
+
 \end{enumerate}
 
 
 
 
-\section{Proof 1}
+
+\section{Contrapositive and converse}
+\begin{enumerate}[(a)]
+    \item
+    \item The contrapositive is REPLACE ME. % true or false?
+    \item The converse is REPLACE ME. % true or false?
+\end{enumerate}
+
+
+
+
+
+\section{Proof practice}
 \begin{enumerate}[(a)]
     \item
     \item
     \item
-\end{enumerate}
-
-
-
-
-\section{Proof 2}
-\begin{enumerate}[(a)]
-    \item
-    \item
-    \item
     \item
     \item
     \item
 \end{enumerate}
+
 
 
 
 
 \section{Gate keepers}
+
 
 
 
