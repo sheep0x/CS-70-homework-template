@@ -4,26 +4,35 @@ For those wondering what this repo is: This repo contains template code for (UC 
 
 
 
-The following is the main content:
+The following are the main content for each assignment:
+    general.tex
     hw1.tex
+    hw2.tex
+    ...
+
+The following are some customization:
+    common/CS-70.tex
+    common/myname.tex
 
 The following are for the human-readable layer.  First three are the CC icon that appears at the end of the document.  latex.tex is a piece of LaTeX code that contains license information, so that we can simply \include it in several documents without having to type it out again and again.
-    cc_by-sa.pdf
-    cc_by-sa.pdf_tex
-    cc_by-sa.svg
-    latex.tex
+    license/cc_by-sa.pdf
+    license/cc_by-sa.pdf_tex
+    license/cc_by-sa.svg
+    license/latex.tex
 
 The following is for the machine-readable layer.  You don't see it directly in the document.  However, it allows certain softwares to obtain information like who the author is, what license the document is released under, etc., which is hard to extract from the visual, human-readable layer.  For example, if you open the compiled PDF file in Evince (the default PDF viewer for GNOME and Unity), you can find the licensing information in Files > Properties (or sth like that).
-    cc_by-sa.xmp
+    license/cc_by-sa.xmp
 
 The following files are byproducts of compilation:
-    cc_by-sa.xmpi
-    latex.aux
-    latex.log
+    license/cc_by-sa.xmpi
+    BLAHBLAH.aux
+    BLAHBLAH.log
+    BLAHBLAH.out
 They are safe to delete.
 
-To adapt this template, you only need to change the following file:
-    hw1.tex
-    cc_by-sa.xmp
+To adapt this template, you only need to change the following files:
+    ASSIGNMENT_NAME.tex
+    license/cc_by-sa.xmp
+    common/myname.tex
 Replace all “YOUR NAME” and “YOUR EMAIL” and that's it.
 
